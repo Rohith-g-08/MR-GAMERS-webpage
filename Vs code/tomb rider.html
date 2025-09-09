@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR GAMER</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="tomb rider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <script>
+      function navigateToProduct(itemName, price, imageSrc) {
+          localStorage.setItem('itemName', itemName);
+          localStorage.setItem('price', price);
+          localStorage.setItem('imageSrc', imageSrc);
+          window.location.href = 'buy.html';
+      }
+      function addToCart(itemName, itemPrice) {
+  // Retrieve the cart from local storage or initialize as an empty array
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  // Find the index of the item in the cart
+  const itemIndex = cart.findIndex(item => item.name === itemName);
+
+  if (itemIndex === -1) {
+      // If the item is not in the cart, add it
+      cart.push({ name: itemName, price: itemPrice });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${itemName} has been added to the cart!`);
+  } else {
+      // If the item is already in the cart, remove it
+      cart.splice(itemIndex, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${itemName} has been removed from the cart!`);
+  }
+}
+
+function viewCart() {
+  window.location.href = 'blla2.html';
+}
+
+function buyNow() {
+  alert("Navigating to the buy now page...");
+}
+
+
+  </script>
+
+
+</head>
+<body>
+    <div class="rohith" id="r">s
+   
+   
+        <ul>
+          <li style="color: aliceblue; font-size: 50px; margin-left: -50px; margin-top: 17px;"><b>|</b></li>
+          <li><a href="MR GAMER.html"><b>HOME</b></a></li>
+          <li><a href="contact us.html">Contact us</a></li>
+          <li><a href="about us.html">About us</a></li>
+          <li style="float: right;"><a href="add to cart.html"> Cart</a></li> 
+          <li style="float: right;"><a href="login.html">Login</a></li>
+          <li style="float: right;"><a href="admin.html"> Admin</a></li>    
+        </ul>
+        <a href="MR GAMER.html"><img src="logo.png"></a>
+      </div>
+      <div class="hh">
+      <h1>Tomb Raider</h1>
+      </div>
+
+      <div class="video">
+      <video controls autoplay muted  src="game/Tomb Raider_ Official Trailer (E3 2011).mp4" width="100%" height="100%" ></video>
+      </div>
+
+      <div class="vvvv">
+        <div id="img">
+        </div><br>
+        <h2>&nbsp;&nbsp; Tomb Raider</h2>
+      <p> Tomb Raider explores the intense origin story of Lara Croft and her ascent from a young woman to a hardened survivor.</p>
+      </div>
+  <div class="genres">
+    <h1>Genres :</h1>
+    <a href="Action Games.html"><p>Action-Adventure</p></a>
+  </div>
+
+
+  <h1 style="color: aliceblue; margin-left: 100px;">Tomb Raider</h1>
+  <div class="wrap">
+
+    <div class="left">
+
+      <h2>Minimum system requirements</h2>
+      <div class="content-left">
+        <ul>
+          <li>Memory: 8 GB</li>
+          <li>Graphics Card: NVIDIA GeForce GTX 1060 or Radeon RX 570</li>
+          <li> CPU: Intel Core i7-4790 or Ryzen 5 1600</li>
+          <li>File Size: 100 GB</li>
+          <li>OS: Windows 10 64-bit or higher</li>
+         </ul>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2> Recommended Requirements</h2>
+
+      <div class="content-right">
+        <ul>
+          <li>Memory: 8 GB</li>
+          <li>Graphics Card: NVIDIA GeForce GTX 1060 or Radeon RX 570</li>
+          <li> CPU: Intel Core i7-4790 or Ryzen 5 1600</li>
+          <li>File Size: 100 GB </li>
+          <li>OS: Windows 10 64-bit or higher</li>
+         </ul>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <center>
+    <button class="add-to-cart" data-name="Product 1" data-price="400"><a href="add to cart.html" onclick="addToCart('Tomb Raider', 600)"> Add to Cart</a></button>&nbsp;&nbsp;&nbsp;
+        <button class="add-to-cart" > <a href="buy.html"  onclick="navigateToProduct('Tomb Raider', 600, '222/tomb raider.webp')"> Buy Now</a></button>
+              
+  
+  </center>
+<br>
+
+  <footer>
+  
+    <div class="footercontainer">
+      <div class="socialicons">
+        <a href="https://www.facebook.com/share/1TFr2J43K7i7rqdj/?mibextid=qi2Omg"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_ro_hith_8?igsh=Zm9qcWhiYTE5b3Fu"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/mad_hit08?t=hA0zmNqFrWAmNq7gU5BWwA&s=08"><i class="fa-brands fa-x"></i></a>
+      </div>
+    </div>
+    
+   
+  
+    <div class="footerl">
+     <ol><span style="color: rgb(75, 68, 68); font-size: 15px;">Resource</span>
+      <br><br>
+  
+      <li>Support-A-Creator</li><br>
+      <li>Distribute on MR GAMERS</li><br>
+      <li>Careers</li><br>
+      <li>Company</li>
+  
+     </ol>
+    </div>
+    <br>
+  
+    <div class="footerl2">
+      <ol><span style="color: rgb(75, 68, 68); font-size: 15px;">Made by MR GAMER</span>
+       <br><br>
+   
+       <li>Fortnite</li><br>
+       <li>Battel Breakes</li><br>
+       <li>Robo recall</li><br>
+       <li>shadow complex</li><br>
+   
+      </ol>
+     </div>
+     
+     <hr style="color: rgb(199, 192, 192);">
+  
+     <center><pre>
+      © 2024, Epic Games, Inc. All rights reserved. Epic, Epic Games, the Epic Games logo, Fortnite, the Fortnite logo, Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, 
+      and the Unreal Tournament logo are trademarks or registered trademarks of Epic Games, 
+      Inc. in the United States of America and elsewhere. Other brands or product names are the trademarks of their respective owners.
+      Our websites may contain links to other sites and resources provided by third parties. 
+      These links are provided for your convenience only. 
+      Epic Games has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.
+  
+     </pre></center>
+  </footer>
+
+      
+</body>
+</html>
