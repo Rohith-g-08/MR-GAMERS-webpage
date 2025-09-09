@@ -1,0 +1,206 @@
+body{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+  
+  img{
+    width: 7%;
+    height: 7%;
+    padding: 0px;
+    border: 0px;
+    margin-left:-470px;
+    
+  }
+  
+  .rohith  ul{
+    
+    font-size: 25px;
+    list-style-type: none;
+    margin-left:145px; 
+  
+    
+  }
+  
+  li{
+    float: left;
+  }
+  
+   ul li a{
+    display: block;
+    padding:10px;
+    overflow: hidden;
+    margin-top : 25px;
+    text-decoration: none;
+    color: azure;
+  }
+  li a:hover{
+    background-color: gainsboro;
+    color: black;
+  }
+.vv{
+  width: 200px;
+  height: 250px;
+  border: 0px solid;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 2px;
+  margin-right: 73px;
+  
+}
+ #sm-1 {
+  background-image:url("222/ascs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#sm-2{
+  background-image: url("222/spiderman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-3{
+  background-image: url("222/batman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-4{
+  background-image: url("222/lastofus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a1{
+  text-decoration: none;
+}
+
+.vv1{
+  width: 200px;
+  height: 250px;
+  border: 0px solid;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 2px;
+  margin-right: 73px;
+}
+
+
+#sm-5 {
+  background-image:url("222/just\ cause-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#sm-6{
+  background-image: url("222/red\ dead.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-7{
+  background-image: url("222/days\ gone.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-8{
+  background-image: url("222/un-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.buyas{
+  font-size: 20px;
+  margin-left: 80px;
+  border-radius: 30px;
+  
+}
+
+.buyas a{
+  text-decoration: none;
+}
+
+button{
+  height: 50px;
+  width: 100px;
+  background-color: rgb(83, 116, 172);
+  border: none;
+  border-radius: 30px;
+  margin-left: -25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+button a{
+  color: aliceblue;
+}
+button a:hover{
+  color: black;
+}
+
+
+
+footer{
+  height: 700px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgb(24, 24, 24);
+  overflow: hidden;
+}
+
+.footercontainer{
+width: 100%;
+padding: 70px 30px 20px;
+}
+
+.socialicons{
+display: flex;
+justify-content: left;
+}
+
+.socialicons a{
+ text-decoration: none;
+ padding: 10px;
+ background-color: aliceblue;
+ margin: 10px;
+ border-radius: 50%;
+}
+
+.socialicons a i{
+font-size: 30px;
+color:black;
+opacity: 0.9;
+}
+
+.socialicons a:hover{
+background-color: rgb(43, 43, 43);
+transition: 0.5s;
+}
+
+.socialicons a:hover i{
+color: aliceblue;
+transition: 0.5s;
+}
+
+
+
+.footerl ol{
+color: aliceblue;
+list-style-type: none;
+
+ 
+}
+
+.footerl2 ol{
+color: aliceblue;
+list-style-type: none;
+
+}
+
+pre{
+color: aliceblue;
+}
+

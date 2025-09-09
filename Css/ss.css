@@ -1,0 +1,316 @@
+body{
+background-color: black;
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+img{
+  width: 7%;
+  height: 7%;
+  padding: 0px;
+  border: 0px;
+  margin-left:-470px;
+  
+}
+
+.rohith  ul{
+  
+  font-size: 25px;
+  list-style-type: none;
+  margin-left:145px;
+  border-radius: 15px;
+
+  
+}
+
+li{
+  float: left;
+}
+
+ ul li a{
+  display: block;
+  padding:10px;
+  overflow: hidden;
+  margin-top : 25px;
+  text-decoration: none;
+  color: azure;
+}
+li a:hover{
+  background-color: gainsboro;
+  color: black;
+
+}
+
+.box{
+  height: 30px;
+  width: 300px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0,0.3);
+  margin-left: 200px;
+
+}
+
+.box:hover input{
+  width: 300px;
+}
+
+.box input{
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
+}
+
+.box a .fas{
+  color: #1daf;
+  font-size: 18px;
+  
+}
+
+.container{
+  position: relative;
+}
+.container .warpper{
+  width: 900px;
+  height: 900px;
+  border-radius: 20px;
+  margin-left: 200px;
+  overflow: hidden;
+}
+.warpper-holder{
+  display:grid;
+  grid-template-columns: repeat(4,100%);
+  height:900px;
+  width: 900px;
+  animation: slider 15s ease-in-out infinite alternate;
+}
+.container #slider-img-1 {
+  background-image:url("assassian3.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.container #slider-img-2 {
+  background-image:url("gta5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container #slider-img-3{
+  background-image:url("watch\ dogs2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container #slider-img-4 {
+  background-image:url("uncharetd\ 4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@keyframes slider{
+  0%{transform: translateX(0%);}
+  10%{transform: translateX(-100%);}
+  20%{transform: translateX(-100%);}
+  30%{transform: translateX(-200%);}
+  40%{transform: translateX(-200%);}
+  50%{transform: translateX(-200%);}
+  60%{transform: translateX(-300%);}
+  70%{transform: translateX(-300%);}
+  80%{transform: translateX(-300%);}
+  90%{transform: translateX(0%);}
+  100%{transform: translateX(0%);}
+}
+
+
+.top{
+  margin-left: 200px;
+  font-size: 30px;
+}
+.top a{
+  text-decoration: none;
+  color: aliceblue
+}
+.top a:hover{
+  color: cornflowerblue;
+}
+
+.vv{
+  width: 200px;
+  height: 250px;
+  border: 0px solid;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 2px;
+  margin-right: 73px;
+}
+ #sm-1{
+  background-image:url("222/ascs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+#sm-2{
+  background-image: url("222/spiderman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-3{
+  background-image: url("222/batman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm-4{
+  background-image: url("222/lastofus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.action{
+  margin-left: 200px;
+  margin-left: 200px;
+  font-size: 30px;
+}
+.action a{
+  text-decoration: none;
+  color: aliceblue
+}
+.action a:hover{
+  color: cornflowerblue;
+}
+
+.vv1{
+  width: 200px;
+  height: 250px;
+  border: 0px solid;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 2px;
+  margin-right: 73px;
+}
+
+#sm-5{
+  background-image: url("222/sleeping\ dogs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sm-6{
+  background-image: url("222/mafia\ 3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sm-7{
+  background-image: url("222/maxpayne\ 3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sm-8{
+  background-image: url("222/tomb\ raider.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vv2{
+  width: 300px;
+  height: 200px;
+  border: 0px solid;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 0px;
+  margin-right: 70px;
+}
+
+#sm-9{
+  background-image: url("222/asm\ 2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sm-10{
+  background-image: url("222/second\ son.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sm-11{
+  background-image: url("222/hitman\ 2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer{
+     height: 700px;
+     width: 100%;
+     border: 1px solid;
+     border-radius: 10px;
+     background-color: rgb(24, 24, 24);
+     padding: 0px;
+     overflow: hidden;
+
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialicons{
+  display: flex;
+  justify-content: left;
+}
+
+.socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i{
+  font-size: 30px;
+  color:black;
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: rgb(43, 43, 43);
+  transition: 0.5s;
+}
+
+.socialicons a:hover i{
+  color: aliceblue;
+  transition: 0.5s;
+}
+
+
+
+ .footerl ol{
+   color: aliceblue;
+   list-style-type: none;
+   
+    
+}
+
+.footerl2 ol{
+  color: aliceblue;
+  list-style-type: none;
+   
+}
+
+pre{
+  color: aliceblue;
+}
+
+

@@ -1,0 +1,218 @@
+body{
+   
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url('game/last\ of\ us.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+    
+    img{
+      width: 7%;
+      height: 7%;
+      padding: 0px;
+      border: 0px;
+      margin-left:-470px;
+      
+    }
+    .rohith{
+        background-color: black;
+        border-radius: 5px;
+    }
+    
+    .rohith  ul{
+      
+      font-size: 25px;
+      list-style-type: none;
+      margin-left:145px; 
+    
+      
+    }
+    
+    .rohith li{
+      float: left;
+    }
+    
+     ul li a{
+      display: block;
+      padding:10px;
+      overflow: hidden;
+      margin-top : 25px;
+      text-decoration: none;
+      color: azure;
+    }
+    li a:hover{
+      background-color: gainsboro;
+      color: black;
+    }
+
+    .hh{
+      color: aliceblue;
+      font-size: 30px;
+      margin-left: 100px;
+    }
+
+    .video{
+      width: 700px;
+      height: 500px;
+      margin-left: 100px;
+      background-size: cover;
+      border-radius: 30px;
+    }
+
+ .vvvv{
+  width: 500px;
+  height: 500px;
+  margin-left: 900px;
+  margin-top: -480px;
+  background-color: black;
+  color: aliceblue;
+  text-align: initial;
+ }
+ .vvvv p{
+  margin-left: 20px;
+  font-size: 20px;
+ }
+
+#img{
+  width: 500px;
+  height: 300px;
+  background-size: cover;
+  background-image: url('game/l.jpg');
+}
+
+.genres{
+  color: aliceblue;
+  margin-left: 100px;
+  background-color: black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.genres h1{
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+.genres p{
+  font-size: 25px;
+  margin-left: 20px;
+}
+.genres a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.genres a:hover{
+  
+  color: rgb(246, 20, 20);
+}
+
+.wrap{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 150px;
+  border: 0px solid black;
+  color: aliceblue;
+}
+
+.wrap .left{
+  width: 450px;
+  background-color: black;
+  border-radius:20px;
+  padding: 20px;
+}
+
+.wrap .right{
+  width: 450px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
+button{
+  border: 0px;
+  border-radius: 40px;
+  height: 40px;
+  width: 100px;
+  font-size: 15px;
+  background-color: hsl(240, 6%, 7%);
+  
+}
+
+a{
+  text-decoration: none;
+  color: rgb(229, 225, 225);
+ }
+ 
+ .add-to-cart  a:hover {
+     color: rgb(27, 12, 239);
+ }
+
+footer{
+  height: 700px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgb(24, 24, 24);
+  padding: 0px;
+  overflow: hidden;
+
+}
+
+.footercontainer{
+width: 100%;
+padding: 70px 30px 20px;
+}
+
+.socialicons{
+display: flex;
+justify-content: left;
+}
+
+.socialicons a{
+ text-decoration: none;
+ padding: 10px;
+ background-color: aliceblue;
+ margin: 10px;
+ border-radius: 50%;
+}
+
+.socialicons a i{
+font-size: 30px;
+color:black;
+opacity: 0.9;
+}
+
+.socialicons a:hover{
+background-color: rgb(43, 43, 43);
+transition: 0.5s;
+}
+
+.socialicons a:hover i{
+color: aliceblue;
+transition: 0.5s;
+}
+
+
+
+.footerl ol{
+color: aliceblue;
+list-style-type: none;
+
+ 
+}
+
+.footerl2 ol{
+color: aliceblue;
+list-style-type: none;
+
+}
+
+pre{
+color: aliceblue;
+}
+
+

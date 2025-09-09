@@ -1,0 +1,150 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img{
+  width: 7%;
+  height: 7%;
+  padding: 0px;
+  border: 0px;
+  margin-left:-350px;
+}  
+
+    
+  .rohith  ul{
+    
+    font-size: 25px;
+    list-style-type: none;
+    margin-left:145px; 
+  
+    
+  }
+  
+  li{
+    float: left;
+  }
+  
+   ul li a{
+    display: block;
+    padding:10px;
+    overflow: hidden;
+    margin-top : 25px;
+    text-decoration: none;
+    color: azure;
+  }
+  li a:hover{
+    background-color: gainsboro;
+    color: black;
+  
+  }
+
+  h1{
+    font-size: 60px;
+    color: aliceblue;
+    padding-left: 30px;
+    font-family: initial;
+  }
+
+  #imge{
+   height:250px;
+   width: 400px;
+   border: 0px solid  black;
+   background-image: url("loggo/summa.jpg");
+   background-size: cover;
+   margin-left: 750px;
+   margin-top: -180px;
+   box-shadow: 3px 3px 2px  rgb(46, 47, 48);
+   border-radius: 10px; 
+  }
+
+  .sss{
+    color: aliceblue;
+    font-size: 20px;
+    
+  }
+  .sss a:hover{
+    color:rgb(87, 87, 240);
+  }
+
+  .sss a{
+    font-size: 30px;
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 150px;
+    
+  }
+
+  .rrr{
+    color: aliceblue;
+    font-size: 20px;
+  }
+
+
+  footer{
+    height: 700px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: rgb(24, 24, 24);
+    padding: 0px;
+    overflow: hidden;
+
+}
+
+.footercontainer{
+ width: 100%;
+ padding: 70px 30px 20px;
+}
+
+.socialicons{
+ display: flex;
+ justify-content: left;
+}
+
+.socialicons a{
+   text-decoration: none;
+   padding: 10px;
+   background-color: aliceblue;
+   margin: 10px;
+   border-radius: 50%;
+}
+
+.socialicons a i{
+ font-size: 30px;
+ color:black;
+ opacity: 0.9;
+}
+
+.socialicons a:hover{
+ background-color: rgb(43, 43, 43);
+ transition: 0.5s;
+}
+
+.socialicons a:hover i{
+ color: aliceblue;
+ transition: 0.5s;
+}
+
+
+
+.footerl ol{
+  color: aliceblue;
+  list-style-type: none;
+  
+   
+}
+
+.footerl2 ol{
+ color: aliceblue;
+ list-style-type: none;
+  
+}
+
+pre{
+ color: aliceblue;
+}
+   
+  
