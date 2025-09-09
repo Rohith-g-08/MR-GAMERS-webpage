@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="buy.css">
+  <title>MR GAMER</title>  
+</head>
+<body>
+  <div class="container">
+    <div class="item-details">
+        <h1 id="itemName">Games</h1>
+        <img id="itemImage" src="" alt="Games" class="item-image">
+        <p id="price">Price: ₹0</p>
+        <p id="description">Enjoy the games in the store</p>
+
+        <div class="selection">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1" onchange="calculateTotal()">
+        </div>
+
+        <p id="totalPrice">Total Price: ₹0</p>
+        <button onclick="placeOrder()" class="order-button">Place Order</button>
+    </div>
+</div>
+
+<script>
+    function calculateTotal() {
+        // Retrieve the price of the clothing item from localStorage
+        const price = parseInt(localStorage.getItem('price'));
+        let quantity = parseInt(document.getElementById('quantity').value);
+
+        // Validate quantity and set minimum to 1
+        if (isNaN(quantity) || quantity < 1) {
+            alert("Quantity must be at least 1.");
+            document.getElementById('quantity').value = 1;
+            quantity = 1;
+        }
+
+        // Calculate total price based on quantity
+        const total = price * quantity;
+        document.getElementById('totalPrice').innerText = `Total Price: ₹ ${total}`;
+    }
+
+    function placeOrder() {
+        // Show confirmation and redirect to order page
+        alert(`Order placed successfully! Quantity: ${quantity}`);
+        window.location.href = 'payment.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const itemName = localStorage.getItem('itemName');
+        const price = localStorage.getItem('price');
+        const imageSrc = localStorage.getItem('imageSrc');
+        const description = localStorage.getItem('description');
+
+        document.getElementById('itemName').innerText = itemName || "Default Item Name";
+        document.getElementById('price').innerText = `Price: ₹ ${price}`;
+        document.getElementById('itemImage').src = imageSrc || "Games-image.jpg";
+        document.getElementById('description').innerText = description || "Enjoy the games in the store.";
+
+        calculateTotal();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order</title>
+    <style>
+        body {
+            background-color: white;
+            color: #333;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .thank-you-container {
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .order-summary p {
+            font-size: 16px;
+            margin: 8px 0;
+            color: #555;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been placed successfully.</p>
+        <img id="itemImage" src="" alt="Clothing Item Image">
+        
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p id="itemName">Item Name</p>
+            <p id="price">Price per Item: ₹0</p>
+            <p id="quantity">Quantity: 0</p>
+            <p id="totalPrice">Total Price: ₹0</p>
+        </div>
+        
+        <button class="back-button" onclick="MRGAMER()">Continue Shopping</button>
+    </div>
+
+    <script>
+        function goToHomePage() {
+            // Redirect to the product or home page
+            window.location.href = 'MR GAMER.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve clothing item details from localStorage
+            const itemName = localStorage.getItem('itemName') || "Sample Item";
+            const price = parseInt(localStorage.getItem('price')) || 0;
+            const imageSrc = localStorage.getItem('imageSrc') || "default-image.jpg";
+            const quantity = parseInt(localStorage.getItem('quantity')) || 1;
+            const size = localStorage.getItem('size') || "M";
+            const color = localStorage.getItem('color') || "Red";
+            const total = price * quantity;
+
+            // Display the retrieved details on the page
+            document.getElementById('itemName').innerText = itemName;
+            document.getElementById('itemImage').src = imageSrc;
+            document.getElementById('price').innerText = `Price per Item: ₹ ${price}`;
+            document.getElementById('quantity').innerText = `Quantity: ${quantity}`;
+            document.getElementById('size').innerText = `Size: ${size}`;
+            document.getElementById('color').innerText = `Color: ${color}`;
+            document.getElementById('totalPrice').innerText = `Total Price: ₹ ${total}`;
+
+            // Clear the order details from localStorage after displaying the summary
+            localStorage.clear();
+        });
+    </script>
+</body>
+</html>

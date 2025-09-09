@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="icon" href="logo.png">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="cart page.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <title>MR GAMER</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #0d0d0d;
+            padding: 20px;
+        }
+        .cart-container {
+            width: 80%;
+            margin: auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0,0,0,.4);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #cccccc;
+        }
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .item-image {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+        }
+        .quantity {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+        }
+        .remove, .custom-button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .remove {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .custom-button {
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+        .cart-total {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            border-top: 1px solid #cccccc;
+            padding-top: 10px;
+        }
+        .empty-cart {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 16px;
+        }
+        button{
+            color: #000;
+            border-radius: 5px;
+            height: 50px;
+            width: 90px;
+            
+        }
+
+        .order-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.order-button:hover {
+    background-color: #45a049;
+    
+}
+
+#totalPrice {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+
+#description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+            </tbody>
+        </table> 
+        <div class="cart-total" id="cartTotal">
+        </div>
+       <center> <button onclick="placeOrder()" class="order-button" ><a href="payment.html" style="text-decoration: none; color: #000;">BUY</a></button>
+       </center>
+    </div>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var cartItemsDiv = document.getElementById('cartItems');
+            var cartTotalDiv = document.getElementById('cartTotal');
+    
+            function updateCart() {
+                cartItemsDiv.innerHTML = '';
+                let total = 0;
+    
+                if (cart.length > 0) {
+                    cart.forEach(function(item, index) {
+                        const itemTotal = parseFloat(item.price) * item.quantity;
+                        total += itemTotal;
+    
+                        const cartItemRow = document.createElement('tr');
+                        const imageUrl = item.imageUrl || "https://via.placeholder.com/60";
+    
+                        cartItemRow.innerHTML = `
+                            <td><img src="${imageUrl}" alt="${item.name}" class="item-image"></td>
+                            <td>${item.name}</td>
+                            <td>$${item.price}</td>
+                            <td><input type="number" class="quantity" min="1" value="${item.quantity}" data-index="${index}"></td>
+                            <td>$${itemTotal.toFixed(2)}</td>
+                            <td>
+                                <button class="remove" data-index="${index}">Remove</button>
+                                <button class="custom-button" data-index="${index}">Custom</button>
+                            </td>
+                        `;
+                        cartItemsDiv.appendChild(cartItemRow);
+                    });
+    
+                    cartTotalDiv.innerHTML = `Total: $${total.toFixed(2)}`;
+                } else {
+                    cartTotalDiv.innerHTML = '';
+                    cartItemsDiv.innerHTML = '<tr><td colspan="6" class="empty-cart">Your cart is empty.</td></tr>';
+                }
+                
+            }
+            
+    
+            cartItemsDiv.addEventListener('click', function(event) {
+                const index = event.target.getAttribute('data-index');
+    
+                if (event.target.classList.contains('remove')) {
+                    cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCart();
+                } else if (event.target.classList.contains('custom-button')) {
+                    alert('Custom button clicked for item: ' + cart[index].name);
+                }
+            });
+    
+            cartItemsDiv.addEventListener('input', function(event) {
+                if (event.target.classList.contains('quantity')) {
+                    const index = event.target.getAttribute('data-index');
+                    const newQuantity = parseInt(event.target.value);
+                    
+                    if (newQuantity >= 1) {
+                        cart[index].quantity = newQuantity;
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCart();
+                    }
+                }
+            });
+    
+            updateCart();
+        });
+        
+    </script>
+</body>
+</html>
+
